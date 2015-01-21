@@ -140,8 +140,7 @@ static PyMethodDef module_methods[] = {
 PyMODINIT_FUNC
 initseqalign(void) 
 {
-    PyObject* m;
-    m = Py_InitModule3("seqalign", module_methods,
+    Py_InitModule3("seqalign", module_methods,
                        "Sequence alignment utilities");
     return;
 
