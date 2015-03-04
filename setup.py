@@ -13,9 +13,9 @@ class MyBuild(DistutilsBuild):
        DistutilsBuild.run(self)
 
 module1 = Extension('seqalign', sources=['seqalign.c'],
-                    include_dirs = ['libs/seq-align/src'],
+                    include_dirs = ['libs/seq-align/src','libs/seq-align/libs'],
                     libraries =['align'],
-                    library_dirs = ['libs/seq-align/src'])
+                    library_dirs = ['libs/seq-align/src','libs/seq-align/libs'])
 setup(
     name="seqalign",
     version="0.1",
